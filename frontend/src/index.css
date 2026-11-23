@@ -2,6 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-gray-50 text-gray-900;
+@layer base {
+  * {
+    border-color: #1e293b;
+  }
+
+  body {
+    background-color: #0b1120;
+    color: #f1f5f9;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+  }
+}
+
+/* Custom scrollbars for clean industrial dashboard */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b1120;
+}
+::-webkit-scrollbar-thumb {
+  background: #27354f;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3b4e72;
+}
+
+/* Recharts tooltip styling resets */
+.recharts-default-tooltip {
+  background-color: #0f172a !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 0.5rem !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5) !important;
+}
+
+.recharts-tooltip-label {
+  color: #94a3b8 !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.recharts-tooltip-item {
+  color: #f8fafc !important;
+  font-size: 0.8125rem !important;
+  padding: 2px 0 !important;
 }
